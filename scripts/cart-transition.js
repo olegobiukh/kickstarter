@@ -61,7 +61,7 @@ back.addEventListener('click', () => {
 });
 
 function toHomePage() {
-  const newUrl = '/';
+  const newUrl = '/kickstarter/';
 
   history.pushState({}, null, newUrl);
   location.reload();
