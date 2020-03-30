@@ -1,0 +1,58 @@
+.footer__logo {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background: transparent;
+  border: none;
+  cursor: pointer; }
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+  margin: auto;
+  margin-top: 142px; }
+  .footer__media {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 150px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 65px;
+    font-size: 25px; }
+    .footer__media--facebook:hover {
+      color: #4064ad;
+      -webkit-transition: color 0.3s;
+      transition: color 0.3s; }
+    .footer__media--twitter:hover {
+      color: #53a7e7;
+      -webkit-transition: color 0.3s;
+      transition: color 0.3s; }
+    .footer__media--instagram:hover {
+      color: #f7016c;
+      -webkit-transition: color 0.3s;
+      transition: color 0.3s; }
+  .footer__copy {
+    color: #bdbdbd;
+    text-align: center;
+    margin-top: 36px; }
+
+@media only screen and (max-width: 786px) {
+  .footer {
+    margin-top: 90px; } }
+
+@media only screen and (max-width: 600px) {
+  .footer__logo {
+    display: none; } }
+
+/*# sourceMappingURL=footer.css.map */

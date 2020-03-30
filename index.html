@@ -1,0 +1,431 @@
+<!-- htmllint tag-bans="false" -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kickstarter</title>
+    <script
+      src="https://kit.fontawesome.com/826c2913f2.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./styles/main.css" />
+  </head>
+  <body>
+    <a href="/cart.html" class="icon-cart__wrapper">
+      <img src="./images/shop/cart.svg" alt="arrow up" class="icon-cart__image" />
+    </a>
+    <a href="#" class="up__wrapper">
+      <img src="./images/arrow-up.png" alt="arrow up" class="up" />
+    </a>
+    <header class="header section">
+      <div class="top header__top">
+        <a href="#" class="top__logo-link">
+          <img src="./images/logo/logo.svg" alt="logo" class="img top__logo" />
+        </a>
+        <div class="menu__toggler" id="burgerToggler">
+          <div class="menu__burger" id="burgerOpen">
+            <span class="menu__line"></span>
+            <span class="menu__line"></span>
+            <span class="menu__line"></span>
+          </div>
+          <img
+            src="./images/menu/cross.png"
+            alt="cross"
+            id="burgerClose"
+            class="menu__hide menu__cross"
+          />
+        </div>
+        <div class="top__right" id="topRight">
+          <a href="#" class="top__link top__link--specs">specs</a>
+          <span class="top__languages">
+            <a href="#" class="top__link top__link--active">ea</a> /
+            <a href="#" class="top__link top__link--passive">ua</a>
+          </span>
+          <a href="/cart.html" class="top__button">buy</a>
+        </div>
+      </div>
+      <div class="intro header__intro">
+        <div class="intro__left">
+          <h1 class="intro__title">Futuristic Wireless Speaker</h1>
+          <p class="intro__text">
+            Luna’s performance is balanced and smooth in all frequency ranges
+            which makes the music both naturally pleasant and distinctly more
+            layered.
+          </p>
+        </div>
+        <div class="intro__image--wrapper">
+          <img src="./images/header/1.png" alt="luna" class="intro__image" />
+        </div>
+      </div>
+      <nav class="nav header__nav" id="menu">
+        <ul class="nav__list" id="navList">
+          <li class="nav__item">
+            <a href="#video" class="nav__link nav__link--active">our story</a>
+          </li>
+          <li class="nav__item"><a href="#about" class="nav__link">about us</a></li>
+          <li class="nav__item">
+            <a href="#tech" class="nav__link">technology</a>
+          </li>
+          <li class="nav__item"><a href="#features" class="nav__link">features</a></li>
+          <li class="nav__item">
+            <a href="#contact" class="nav__link">get in touch</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="advantages header__advantages" id="advantages">
+        <article class="advantages__box" id="adv1">
+          <img
+            src="./images/adventages/1.png"
+            alt="futuristic design"
+            class="advantages__image"
+            id="advNex"
+          />
+          <h2 class="advantages__title">futuristic design</h2>
+          <p class="advantages__text">
+            To give Luna a truly flawless look, we specifically picked aircraft
+            grade aluminum as its material and adopted both three-dimensional
+            stretch-bending technology and a high precision cold forging
+            technique.
+          </p>
+        </article>
+        <article class="advantages__box advantages__hide">
+          <img
+            src="./images/adventages/2.png"
+            alt="futuristic design"
+            class="advantages__image"
+          />
+          <h2 class="advantages__title">tweeter speaker system</h2>
+          <p class="advantages__text">
+            To deliver a more layered sound performance better than a sole
+            full-range speaker, our team equipped Luna with one more tweeter
+            speaker responsible for high-frequency sound independently.
+          </p>
+        </article>
+        <article class="advantages__box advantages__hide">
+          <img
+            src="./images/adventages/3.png"
+            alt="futuristic design"
+            class="advantages__image"
+          />
+          <h2 class="advantages__title">multiroom system</h2>
+          <p class="advantages__text">
+            Luna is natively compatible with your home Wi-Fi. Set up multiple
+            speakers in different rooms to expand your music experience into the
+            entire house.
+          </p>
+        </article>
+        <article class="advantages__box advantages__hide">
+          <img
+            src="./images/adventages/4.png"
+            alt="futuristic design"
+            class="advantages__image"
+          />
+          <h2 class="advantages__title">intuitive lighting system</h2>
+          <p class="advantages__text">
+            An intuitive user interface allows you to adjust the hue and
+            saturation of color for lighting that fits any mood and situation.
+          </p>
+        </article>
+        <div class="buttons__wrapper">
+          <div class="buttons">
+            <button type="button" class="buttons__item" id="advPr"></button>
+            <button type="button" class="buttons__item" id="advNe"></button>
+          </div>
+          <div class="buttons__counter">
+            <span class="buttons__counter--1" id="advCounter">01</span>/<span
+              class="buttons__counter--2"
+              id="advantagesNumAll"
+              >04</span
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="video" id="video">
+      <div class="video__background"></div>
+      <div class="video__box">
+        <span class="video__triangle"></span>
+        <span class="video__text">play</span>
+      </div>
+    </section>
+    <section class="about section" id="about">
+      <div class="about__container">
+        <h2 class="about__title">design for future</h2>
+        <img src="./images/about/1.png" alt="about" class="about__image" />
+        <div class="about__box">
+          <p class="about__text">
+            In 2014, a group of geeky industrial designers, engineering veterans
+            and acoustic experts formed crazybaby. This is a bunch of passionate
+            people who are crazy enough to think they can challenge the industry
+            with disruptive audio products.
+          </p>
+          <a href="#" class="about__link">see more about us</a>
+        </div>
+      </div>
+    </section>
+    <section class="tech section" id="tech">
+      <h2 class="tech__title">technology</h2>
+      <div class="tech-wrapper">
+        <div class="tech__image-wrapper">
+          <img src="./images/tech/1.png" alt="tech" class="tech__image" />
+          <div class="tech__point-wrapper">
+            <input
+              id="tech__point--1"
+              name="technology"
+              type="radio"
+              class="tech__input"
+            />
+            <label for="tech__point--1" class="tech__point"></label>
+            <div class="tech__descr tech__descr--1">
+              Lorem ipsum dolor sit amet, consectetur
+            </div>
+          </div>
+          <div class="tech__point-wrapper">
+            <input
+              id="tech__point--2"
+              name="technology"
+              type="radio"
+              class="tech__input"
+            />
+            <label for="tech__point--2" class="tech__point"></label>
+            <div class="tech__descr tech__descr--2">
+              Lorem ipsum dolor sit amet, consectetur
+            </div>
+          </div>
+          <div class="tech__point-wrapper">
+            <input
+              id="tech__point--3"
+              name="technology"
+              type="radio"
+              class="tech__input"
+            />
+            <label for="tech__point--3" class="tech__point"></label>
+            <div class="tech__descr">
+              Lorem ipsum dolor sit amet, consectetur
+            </div>
+          </div>
+          <div class="tech__point-wrapper">
+            <input
+              id="tech__point--4"
+              name="technology"
+              type="radio"
+              class="tech__input"
+            />
+            <label for="tech__point--4" class="tech__point"></label>
+            <div class="tech__descr tech__descr--4">
+              Lorem ipsum dolor sit amet, consectetur
+            </div>
+          </div>
+          <div class="tech__point-wrapper">
+            <input
+              id="tech__point--5"
+              name="technology"
+              type="radio"
+              class="tech__input"
+            />
+            <label for="tech__point--5" class="tech__point"></label>
+            <div class="tech__descr tech__descr--5">
+              Lorem ipsum dolor sit amet, consectetur
+            </div>
+          </div>
+          <div class="tech__point-wrapper">
+            <input
+              id="tech__point--6"
+              name="technology"
+              type="radio"
+              class="tech__input"
+            />
+            <label for="tech__point--6" class="tech__point"></label>
+            <div class="tech__descr tech__descr--6">
+              Lorem ipsum dolor sit amet, consectetur
+            </div>
+          </div>
+          <div class="tech__point-wrapper">
+            <input
+              id="tech__point--7"
+              name="technology"
+              type="radio"
+              class="tech__input"
+            />
+            <label for="tech__point--7" class="tech__point"></label>
+            <div class="tech__descr tech__descr--7">
+              Lorem ipsum dolor sit amet, consectetur
+            </div>
+          </div>
+          <div class="tech__point-wrapper">
+            <input
+              id="tech__point--8"
+              name="technology"
+              type="radio"
+              class="tech__input"
+            />
+            <label for="tech__point--8" class="tech__point"></label>
+            <div class="tech__descr tech__descr--8">
+              Lorem ipsum dolor sit amet, consectetur
+            </div>
+          </div>
+          <div class="tech__point-wrapper">
+            <input
+              id="tech__point--9"
+              name="technology"
+              type="radio"
+              class="tech__input"
+            />
+            <label for="tech__point--9" class="tech__point"></label>
+            <div class="tech__descr tech__descr--9 tech__descr--right">
+              Lorem ipsum dolor sit amet, consectetur
+            </div>
+          </div>
+          <div class="tech__point-wrapper">
+            <input
+              id="tech__point--10"
+              name="technology"
+              type="radio"
+              class="tech__input"
+            />
+            <label for="tech__point--10" class="tech__point"></label>
+            <div class="tech__descr tech__descr--10 tech__descr--right">
+              Lorem ipsum dolor sit amet, consectetur
+            </div>
+          </div>
+          <div class="tech__point-wrapper">
+            <input
+              id="tech__point--11"
+              name="technology"
+              type="radio"
+              class="tech__input"
+            />
+            <label for="tech__point--11" class="tech__point"></label>
+            <div class="tech__descr tech__descr--11 tech__descr--right">
+              Lorem ipsum dolor sit amet, consectetur
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="testimonials">
+      <div class="testimonials__box">
+        <p class="testimonials__text">
+          It really took me by surprise honestly to have such full beautiful
+          sound that coming out of this small compact device. And with the brush
+          aluminum surface, it feels so familiar. Like my iPhone.
+        </p>
+        <div class="testimonials__image"></div>
+        <h3 class="testimonials__name">Michel Grover</h3>
+        <span class="testimonials__position">creative director</span>
+        <img
+          src="./images/testimonials/quotes.png"
+          alt="quotes"
+          class="testimonials__quotes"
+        />
+      </div>
+    </section>
+    <section class="features section" id="features">
+      <div class="features__container">
+        <h2 class="features__title">features</h2>
+        <div class="features__wrapper" id="feat">
+          <article class="features__box">
+            <h3 class="features__name">sound &amp; music</h3>
+            <ul class="features__list">
+              <li class="features__item">Feel-in-chest Base Power</li>
+              <li class="features__item">
+                Lossless Digital Audio Transmission
+              </li>
+              <li class="features__item">Easy & Stable Stereo Pairing</li>
+              <li class="features__item">
+                Crisp and Clear High Frequency Sound
+              </li>
+              <li class="features__item">
+                Streams from Cloud Music and Local Library
+              </li>
+              <li class="features__item">
+                Auto Music Playback from Last Song Stopped
+              </li>
+            </ul>
+          </article>
+          <article class="features__box features__hide">
+            <h3 class="features__name">connectivity</h3>
+            <ul class="features__list">
+              <li class="features__item">Hands Free Wireless Audio</li>
+              <li class="features__item">Bluetooth 4.0 LE</li>
+              <li class="features__item">Wi-Fi 2.4 GHz (802.11 b/g/n)</li>
+              <li class="features__item">Smart Multiroom System Set Up</li>
+              <li class="features__item">
+                Party Mode with 6.0 Units and above
+              </li>
+              <li class="features__item">
+                Powerful MESHNET Multi Speaker Network
+              </li>
+            </ul>
+          </article>
+          <article class="features__box features__hide">
+            <h3 class="features__name">app features</h3>
+            <ul class="features__list">
+              <li class="features__item">Customize Music Schedule</li>
+              <li class="features__item">Wake Up with Favorite Songs</li>
+              <li class="features__item">Home Detection Auto Wake Up</li>
+              <li class="features__item">Color Wheel & Saturation Change</li>
+            </ul>
+          </article>
+          <div class="buttons__wrapper features__buttons">
+            <div class="buttons">
+              <button type="button" class="buttons__item" id="featPr"></button>
+              <button type="button" class="buttons__item" id="featNe"></button>
+            </div>
+            <div class="buttons__counter">
+              <span class="buttons__counter--1" id="featCounter">01</span>/<span
+                class="buttons__counter--2"
+                id="featNumAll"
+                >03</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <img src="./images/features/1.png" alt="luna" class="features__image" />
+    </section>
+    <section class="questions section" id="contact">
+      <h2 class="questions__title">do you have any questions?</h2>
+      <form class="questions__form" method="POST">
+        <input
+          type="email"
+          class="questions__field"
+          placeholder="Your email"
+          required
+        />
+        <textarea
+          cols="30"
+          rows="10"
+          class="questions__field questions__textarea"
+          placeholder="Your message..."
+          required
+        ></textarea>
+        <button type="submit" class="questions__button">send</button>
+      </form>
+    </section>
+    <footer class="footer">
+      <a href="#" class="footer__logo">
+        <img src="./images/logo/logo.svg" alt="logo" />
+      </a>
+      <div class="footer__media">
+        <a href="#" class="footer__media--facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="footer__media--twitter">
+          <i class="fab fa-twitter"> </i>
+        </a>
+        <a href="#" class="footer__media--instagram">
+          <i class="fab fa-instagram info__icon"></i>
+        </a>
+      </div>
+      <p class="footer__copy">
+        &copy; 2019 All rights reserved. Terms of Use & Privacy Policy
+      </p>
+    </footer>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/advantages.js"></script>
+    <script src="scripts/features.js"></script>
+    <script src="scripts/menu.js"></script>
+  </body>
+</html>

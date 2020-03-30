@@ -1,0 +1,27 @@
+.menu__toggler {
+  position: absolute;
+  width: 25px;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+  display: none;
+  cursor: pointer; }
+
+.menu__line {
+  display: block;
+  width: 100%;
+  border-bottom: 3px solid #333; }
+  .menu__line:not(:first-of-type) {
+    margin-top: 3px; }
+
+.menu__hide {
+  display: none; }
+
+.menu__cross {
+  margin-left: 10px; }
+
+@media only screen and (max-width: 786px) {
+  .menu__toggler {
+    display: block; } }
+
+/*# sourceMappingURL=menu.css.map */

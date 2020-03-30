@@ -1,0 +1,344 @@
+<!-- htmllint tag-bans="false" -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kickstarter</title>
+    <script
+      src="https://kit.fontawesome.com/826c2913f2.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./styles/main.css" />
+  </head>
+  <body>
+    <main class="cart">
+      <i class="fas fa-times basket__close" onclick="toHomePage()"></i>
+      <button class="top__logo-button top__logo-button--cart" onclick="toHomePage()">
+        <img src="./images/logo/logo.svg" alt="logo" class="img top__logo" />
+      </button>
+      <span class="cart__arrow" id="back">
+        <i class="fas fa-arrow-left"></i>
+      </span>
+      <div class="cart__progress progress" id="progress">
+        <div class="progress__item--wrapper">
+          <div class="progress__item" id="progress__item-1"></div>
+          <span class="progress__text">card</span>
+          <span class="progress__line"></span>
+        </div>
+        <div class="progress__item--wrapper">
+          <div class="progress__item" id="progress__item-2"></div>
+          <span class="progress__text">shipping</span>
+          <span class="progress__line"></span>
+        </div>
+        <div class="progress__item--wrapper">
+          <div class="progress__item" id="progress__item-3"></div>
+          <span class="progress__text">payment</span>
+        </div>
+      </div>
+      <form class="cart__form" id="shipping">
+        <div class="cart__group field">
+          <input
+            type="input"
+            class="cart__field"
+            placeholder="First and Last name *"
+            name="name"
+            id="name"
+            required
+          />
+          <label for="name" class="cart__label">First and Last name *</label>
+        </div>
+        <div class="cart__group field">
+          <input
+            type="input"
+            class="cart__field"
+            placeholder="Email *"
+            name="email"
+            id="email"
+            required
+          />
+          <label for="email" class="cart__label">Email *</label>
+        </div>
+        <div class="cart__group field">
+          <input
+            type="input"
+            class="cart__field"
+            placeholder="Phone number *"
+            name="phone"
+            id="phone"
+            required
+          />
+          <label for="phone" class="cart__label">Phone number *</label>
+        </div>
+        <div class="cart__group field">
+          <input
+            type="input"
+            class="cart__field"
+            placeholder="Country *"
+            name="country"
+            id="country"
+            required
+          />
+          <label for="country" class="cart__label">Country *</label>
+        </div>
+        <div class="cart__group field">
+          <input
+            type="input"
+            class="cart__field"
+            placeholder="City *"
+            name="city"
+            id="city"
+            required
+          />
+          <label for="city" class="cart__label">City *</label>
+        </div>
+        <div class="cart__group field">
+          <input
+            type="input"
+            class="cart__field"
+            placeholder="Address *"
+            name="address"
+            id="address"
+            required
+          />
+          <label for="address" class="cart__label">Address *</label>
+        </div>
+        <div class="cart__buttons">
+          <button type="button" class="cart__link" onclick="cartReturn()">
+            return to cart
+          </button>
+          <button type="submit" class="cart__button" onsubmit="cartContinue()">
+            continue
+          </button>
+        </div>
+      </form>
+      <section class="basket" id="cart">
+        <div class="basket__container">
+          <div class="basket__left">
+            <h2 class="basket__title basket__titles--left">luna eye</h2>
+            <span class="basket__price basket__titles--left">$129.00</span>
+            <img src="./images/shop/1.png" alt="luna" class="basket__image" />
+          </div>
+          <div class="basket__right">
+            <div class="basket__info">
+              <h2 class="basket__title basket__titles--right">luna eye</h2>
+              <p class="basket__price basket__titles--right">$129.00</p>
+              <div class="basket__colors-wrapper">
+                <div class="basket__colors">
+                  <label for="color-1" class="basket__color">
+                    <input
+                      type="radio"
+                      name="color"
+                      value="silver"
+                      onchange="getColor(this)"
+                      id="color-1"
+                    />
+                  </label>
+                  <label for="color-2" class="basket__color">
+                    <input
+                      type="radio"
+                      name="color"
+                      value="dark space"
+                      onchange="getColor(this)"
+                      id="color-2"
+                    />
+                  </label>
+                  <label for="color-3" class="basket__color">
+                    <input
+                      type="radio"
+                      name="color"
+                      value="red"
+                      onchange="getColor(this)"
+                      id="color-3"
+                    />
+                  </label>
+                  <label for="color-4" class="basket__color">
+                    <input
+                      type="radio"
+                      name="color"
+                      value="gold"
+                      onchange="getColor(this)"
+                      id="color-4"
+                    />
+                  </label>
+                  <label for="color-5" class="basket__color">
+                    <input
+                      type="radio"
+                      name="color"
+                      value="black"
+                      onchange="getColor(this)"
+                      id="color-5"
+                    />
+                  </label>
+                </div>
+                <span class="basket__colors-text" id="mainColor">silver</span>
+              </div>
+              <div class="basket__info-counter">
+                <i class="fas fa-minus cart__icon" id="cartMinus"></i>
+                <input
+                  type="number"
+                  class="basket__input"
+                  min="1"
+                  max="10"
+                  value="1"
+                  id="cartInput"
+                />
+                <i class="fas fa-plus cart__icon" id="cartAdd"></i>
+              </div>
+              <button type="button" class="basket__button" id="addToCart">
+                add to cart
+              </button>
+            </div>
+            <div class="summary">
+              <h3 class="summary__title">order summary</h3>
+              <div class="summary__box">
+                <span class="summary__suptitle">Total:</span>
+                <span class="summary__price">$<span id="cost">129</span>.00</span>
+                <button
+                  type="button"
+                  class="summary__button"
+                  onclick="cartContinue()"
+                >
+                  continue
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="basket__shipping">
+          <img src="./images/shop/2.png" alt="car" />
+          <span class="basket__text">Free Shipping + Free Returns</span>
+        </div>
+        <ul class="basket__list" id="cartList"></ul>
+      </section>
+
+      <form action="POST" class="cart-white" id="payment">
+        <div class="cart__cards">
+          <img src="./images/shop/cards/1.svg" alt="mastercard" />
+          <img src="./images/shop/cards/2.svg" alt="visa" />
+          <img src="./images/shop/cards/3.svg" alt="apple pay" />
+          <img src="./images/shop/cards/4.svg" alt="american express" />
+        </div>
+        <div class="cart__group field">
+          <input
+            type="input"
+            class="cart__field"
+            placeholder="Card holder *"
+            name="holder"
+            id="holder"
+            required
+          />
+          <label for="holder" class="cart__label">Card holder *</label>
+        </div>
+        <div class="cart__group field">
+          <input
+            type="number"
+            maxlength="12"
+            class="cart__field"
+            placeholder="0000 0000 0000 0000"
+            name="number"
+            id="number"
+            required
+          />
+          <label for="number" class="cart__label">Card number *</label>
+        </div>
+        <div class="cart__group-bottom">
+          <div class="cart__group-expires--wrapper">
+            <div class="cart__group field cart__group-expires">
+              <input
+                type="number"
+                class="cart__field"
+                placeholder="MM"
+                min="1"
+                max="12"
+                name="mm"
+                id="mm"
+                required
+                maxlength="2"
+              />
+              <label for="mm" class="cart__label">MM</label>
+            </div>
+            /
+            <div class="cart__group field cart__group-expires">
+              <input
+                type="number"
+                class="cart__field"
+                placeholder="YY"
+                name="yy"
+                id="yy"
+                min="10"
+                max="30"
+                required
+                maxlength="2"
+              />
+              <label for="yy" class="cart__label">YY</label>
+            </div>
+          </div>
+          <div class="cart__group field cart__group-cvc">
+            <input
+              type="input"
+              class="cart__field"
+              placeholder="City *"
+              name="cvc"
+              id="cvc"
+              required
+              maxlength="3"
+            />
+            <label for="cvc" class="cart__label">CVC</label>
+          </div>
+        </div>
+        <div class="cart__buttons cart__buttons-shipping">
+          <button
+            type="button"
+            class="cart__link cart__link-shipping"
+            onclick="cartReturn()"
+          >
+            return to cart
+          </button>
+          <button type="submit" class="cart__button">
+            place order
+          </button>
+        </div>
+      </form>
+      <section class="gratitude" id="gratitude">
+        <img
+          src="./images/thanks/background.svg"
+          class="gratitude__background"
+          alt="points"
+        />
+        <h1 class="gratitude__title">Thank you!</h1>
+        <span class="gratitude__subtitle">We hope you enjoy your purchase!</span
+        >
+        <p class="gratitude__text">
+          Your order is proccessing. We’ll email you an update when we’ve
+          shipping it.
+        </p>
+        <button class="gratitude__button" onclick="toHomePage()">
+          homepage
+        </button>
+      </section>
+    </main>
+    <footer class="footer">
+      <button class="footer__logo" onclick="toHomePage()">
+        <img src="./images/logo/logo.svg" alt="logo" />
+      </button>
+      <div class="footer__media">
+        <a href="https://www.facebook.com/oleg.obiukh.1" class="footer__media--facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://twitter.com/home" class="footer__media--twitter">
+          <i class="fab fa-twitter"> </i>
+        </a>
+        <a href="https://www.instagram.com/obiukholeg/" class="footer__media--instagram">
+          <i class="fab fa-instagram info__icon"></i>
+        </a>
+      </div>
+      <p class="footer__copy">
+        &copy; 2019 All rights reserved. Terms of Use & Privacy Policy
+      </p>
+    </footer>
+    <script type="text/javascript" src="scripts/cart-add.js"></script>
+    <script type="text/javascript" src="scripts/cart-transition.js"></script>
+    <script type="text/javascript" src="scripts/main.js"></script>
+  </body>
+</html>

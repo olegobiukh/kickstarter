@@ -1,0 +1,84 @@
+.features {
+  position: relative;
+  margin-top: 110px;
+  padding-top: 40px; }
+  .features__wrapper {
+    max-width: 786px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-left: 4%; }
+  .features__list {
+    list-style-type: disc;
+    padding-left: 0;
+    font-size: 16px;
+    line-height: 1.8; }
+  .features__name {
+    font-size: 34px;
+    font-family: "DIN Pro Cond", sans-serif;
+    color: #0c797a;
+    text-transform: uppercase; }
+  .features__image {
+    position: absolute;
+    top: 314px;
+    right: 0;
+    z-index: -1; }
+  .features__box {
+    max-width: 378px; }
+    .features__box:first-of-type {
+      -ms-flex-item-align: end;
+          align-self: flex-end; }
+    .features__box:nth-of-type(3) {
+      margin-top: 121px;
+      -ms-flex-item-align: center;
+          align-self: center; }
+
+@media only screen and (max-width: 600px) {
+  .features {
+    width: 100%;
+    margin: 0;
+    margin-top: 50px;
+    padding: 5%;
+    background-color: #f2f2f2;
+    line-height: 1.4; }
+    .features__wrapper {
+      height: 472px; }
+    .features__item {
+      line-height: 1.4;
+      margin-bottom: 10px; }
+    .features__container {
+      position: relative;
+      overflow: hidden; }
+    .features__box {
+      right: 0%;
+      width: 100%;
+      -webkit-transition: right 0.5s;
+      transition: right 0.5s; }
+      .features__box:first-of-type, .features__box:nth-of-type(3) {
+        -ms-flex-item-align: start;
+            align-self: flex-start; }
+      .features__box:nth-of-type(3) {
+        margin-top: 0; }
+    .features__list {
+      padding-left: 14px;
+      text-align: left; }
+    .features__hide {
+      position: absolute;
+      right: -229%; }
+    .features__show {
+      right: 0%; }
+    .features__image {
+      position: static;
+      width: 100%; }
+    .features__buttons {
+      left: 0;
+      padding-top: 11px; } }
+
+/*# sourceMappingURL=features.css.map */
