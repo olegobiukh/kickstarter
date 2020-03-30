@@ -1,0 +1,65 @@
+@import "../utils/vars";
+@import "../utils/extends";
+$box-width: 786px;
+
+.testimonials {
+  width: 80%;
+  margin: auto;
+  margin-top: 90px;
+  &__box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: $box-width;
+    margin: auto;
+  }
+  &__quotes {
+    position: absolute;
+    top: -19px;
+    right: calc(#{75% / 2});
+    z-index: -1;
+  }
+
+  &__image {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    margin-top: 30px;
+    background-image: url("../../images/testimonials/3.jpg");
+    @extend %background-image;
+    &:hover {
+      background-size: 180%;
+    }
+  }
+  &__position {
+    color: #7c7c7c;
+    text-transform: capitalize;
+  }
+
+  &__text {
+    font-family: "DIN Pro Cond", sans-serif;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    color: $c-black;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .testimonials {
+    margin-top: 30px;
+    &__text {
+      font-size: 16px;
+      font-weight: 600;
+    }
+    &__quotes {
+      transform: scale(0.8);
+      right: auto;
+    }
+    &__image {
+      height: 140px;
+      width: 140px;
+    }
+  }
+}

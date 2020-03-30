@@ -1,0 +1,280 @@
+@import "../utils/vars";
+@import "../utils/mixins";
+
+.basket {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 130px;
+  &__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+  &__right {
+    width: 70%;
+    display: flex;
+  }
+
+  &__close {
+    display: none;
+  }
+
+  &__info {
+    width: 300px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 30px;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    &-counter {
+      margin-top: 50px;
+    }
+  }
+  &__titles--left {
+    display: none;
+  }
+
+  &__title {
+    font-family: "DIN Pro Cond", sans-serif;
+    font-size: 48px;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  &__price {
+    margin-top: 20px;
+    font-family: "DIN Pro Cond", sans-serif;
+    color: $c-black;
+    font-size: 24px;
+  }
+
+  &__input {
+    width: 72px;
+    margin: 0 20px;
+    padding: 10px 20px;
+  }
+
+  &__icon {
+    &__active {
+      color: #4f4f4f;
+    }
+    &__passive {
+      color: #d0d0d0;
+    }
+  }
+  &__button {
+    @include button(15px, 45px);
+    color: $c-black;
+    border: 1px solid $c-black;
+    background-color: transparent;
+    font-weight: bold;
+    margin-top: 50px;
+    cursor: pointer;
+    transition: all 0.5s;
+    &:hover {
+      color: $c-white;
+      background-color: $c-black;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-around;
+  }
+  &__shipping {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+  }
+
+  &__text {
+    font-size: 16px;
+    color: #4f4f4f;
+    margin-left: 28px;
+  }
+
+  &__image {
+    display: flex;
+    align-self: baseline;
+    width: 100%;
+  }
+
+  &__colors {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+      margin-top: 54px;
+    }
+    &-text {
+      margin-top: 19px;
+      font-size: 12px;
+      text-transform: uppercase;
+      color: $c-black;
+      text-align: center;
+    }
+  }
+
+  &__color {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    &--active::after {
+      content: "";
+      position: absolute;
+      top: -4px;
+      left: -4px;
+      width: 29px;
+      height: 29px;
+      border-radius: 50%;
+      border: 2px solid black;
+    }
+    &:first-of-type {
+      background-color: #d4d4d4;
+    }
+    &:nth-of-type(2) {
+      background-color: #a4a4a4;
+    }
+    &:nth-of-type(3) {
+      background-color: #a1847d;
+    }
+    &:nth-of-type(4) {
+      background-color: #b4a492;
+    }
+    &:nth-of-type(5) {
+      background-color: #828387;
+    }
+  }
+  &__color input {
+    display: none;
+  }
+
+  &__list {
+    width: 582px;
+    margin-top: 100px;
+    padding: 0;
+  }
+
+  &__item {
+    position: relative;
+    background-color: $c-white;
+    padding: 16px 0 16px 8%;
+    display: flex;
+    align-items: center;
+    &-counter {
+      margin-left: 72px;
+    }
+    &-box {
+      display: flex;
+      margin-left: 20px;
+    }
+    &-cross {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      font-size: 19px;
+      color: #828282;
+      cursor: pointer;
+    }
+    &-color {
+      font-weight: bold;
+      text-transform: capitalize;
+    }
+    &:not(:first-of-type) {
+      margin-top: 40px;
+    }
+  }
+}
+
+.basket__color-input:checked ~ .basket__color {
+  width: 100px !important;
+}
+
+@media only screen and (max-width: 1000px) {
+  .basket {
+    flex-direction: column;
+    &__container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__right {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .basket {
+    margin-top: 0;
+
+    &__close {
+      display: block;
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      font-size: 22px;
+      color: #828282;
+    }
+
+    &__titles {
+      &--left {
+        display: block;
+      }
+      &--right {
+        display: none;
+      }
+    }
+
+    &__item {
+      padding: 30px 0 27px;
+      &-box {
+        flex-direction: column;
+      }
+      &-counter {
+        margin: 0;
+      }
+    }
+
+    &__image {
+      width: 100%;
+    }
+
+    &__left {
+      text-align: center;
+    }
+
+    &__right {
+      flex-direction: column;
+    }
+    &__list {
+      width: 100%;
+    }
+
+    &__info {
+      width: 100%;
+      padding-bottom: 40px;
+    }
+
+    &__colors-wrapper {
+      width: 80%;
+    }
+  }
+}

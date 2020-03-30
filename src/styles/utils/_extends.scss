@@ -1,4 +1,33 @@
-%h1 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
+$bg: #0baad4;
+$hover: darken($bg, 10%);
+
+%background-image {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+%logo {
+  width: fit-content;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+%link {
+  position: relative;
+  text-transform: uppercase;
+  font-weight: normal;
+  text-decoration: none;
+  line-height: 24px;
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    transition: transform 0.5s ease;
+    top: 23px;
+  }
+  &:hover:before {
+    transform: scaleX(1);
+  }
 }

@@ -1,6 +1,30 @@
-@mixin hover($_property, $_toValue) {
-  transition: #{$_property} 0.3s;
+@mixin button($_ver, $_hor) {
+  text-transform: uppercase;
+  padding: $_ver $_hor;
+  cursor: pointer;
+}
+
+@mixin icons($_right, $_bottom) {
+  position: fixed;
+  bottom: $_bottom;
+  right: $_right;
+  cursor: pointer;
+  z-index: 1;
+  transition: bottom 2s;
+}
+
+@mixin buttonBlack($_ver, $_hor) {
+  color: $c-white;
+  padding: $_ver $_hor;
+  text-transform: uppercase;
+  font-size: 12px;
+  border: 1px solid transparent;
+  background-color: $c-black;
+  cursor: pointer;
+  transition: all 1s;
   &:hover {
-    #{$_property}: $_toValue;
+    color: $c-black;
+    background-color: $c-white;
+    border-color: $c-black;
   }
 }

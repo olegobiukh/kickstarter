@@ -1,0 +1,72 @@
+@import "../utils/vars";
+@import "../utils/extends";
+
+.top {
+  &__button {
+    width: 100px;
+    padding: 16px 0;
+    color: $c-white;
+    text-transform: uppercase;
+    background-color: $c-black;
+    text-align: center;
+  }
+  &__right {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+  }
+  &__languages {
+    margin: 0 37px;
+  }
+  &__logo-button {
+    @extend %logo;
+  }
+  &__link {
+    font-size: 14px;
+    &--active {
+      color: $c-black;
+    }
+    &--passive {
+      color: #bdbdbd;
+    }
+    &--specs {
+      color: #4f4f4f;
+    }
+  }
+}
+
+@media only screen and (max-width: 786px) {
+  .top {
+    &__right {
+      display: none;
+      position: absolute;
+      top: 347px;
+      left: 50%;
+      z-index: 5;
+      transform: translateX(-50%);
+      justify-content: center;
+      width: 100%;
+      &--show {
+        display: flex;
+        transition: all 1s;
+      }
+    }
+    &__button {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .top {
+    display: none;
+    &__logo {
+      &-button {
+        display: none;
+      }
+      &-link--cart {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,80 @@
+@import "../utils/vars";
+
+$box-width: 232px;
+
+.questions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 110px;
+  padding-top: 40px;
+  &__title {
+    min-width: 45%;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    min-width: 50%;
+  }
+  &__field {
+    width: 100%;
+    color: #bdbdbd;
+    border: 1px solid #828282;
+    padding: 14px 30px;
+    font-size: 16px;
+  }
+  &__textarea {
+    margin-top: 19px;
+  }
+  &__button {
+    align-self: baseline;
+    margin-top: 30px;
+    padding: 16px 35px;
+    background-color: #0db2b3;
+    color: $c-white;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    &:hover {
+      background-color: darken(#0db2b3, 10%);
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .questions {
+    &__title {
+      width: 55%;
+    }
+    &__form {
+      min-width: 200px;
+    }
+  }
+}
+
+@media only screen and (max-width: 744px) {
+  .questions {
+    flex-direction: column;
+    &__title {
+      width: 100%;
+    }
+    &__form {
+      min-width: 100%;
+      margin-top: 30px;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .questions {
+    &__title {
+      font-size: 37px;
+    }
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .questions {
+    margin-top: 50px;
+  }
+}

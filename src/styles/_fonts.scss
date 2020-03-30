@@ -1,6 +1,31 @@
 @font-face {
-  font-family: "Roboto";
-  src: url("../fonts/Roboto-Regular-webfont.woff") format("woff");
+  font-family: "Helvetica Neue";
+  src: url("../fonts/helvetica-neue/HelveticaNeueCyr-Light.eot");
+  src: local("../fonts/helvetica-neue/HelveticaNeueCyr-Light"),
+    local("HelveticaNeueCyr-Light"),
+    url("../fonts/helvetica-neue/HelveticaNeueCyr-Light.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/helvetica-neue/HelveticaNeueCyr-Light.woff2") format("woff2"),
+    url("../fonts/helvetica-neue/HelveticaNeueCyr-Light.woff") format("woff"),
+    url("../fonts/helvetica-neue/HelveticaNeueCyr-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DIN Pro Cond";
+  src: url("./fonts/din-pro/DINPro-CondensedRegular.eot");
+  src: local("DIN Pro Condensed Regular"),
+    local("DINPro-CondensedRegular"),
+    url("../fonts/din-pro/#iefix") format("embedded-opentype"),
+    url("./fonts/din-pro/DINPro-CondensedRegular.woff") format("woff"),
+    url("./fonts/din-pro/DINPro-CondensedRegular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Opium";
+  src: url("../fonts/opium/opium.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }

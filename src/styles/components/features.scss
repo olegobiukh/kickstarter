@@ -1,0 +1,101 @@
+@import "../utils/vars";
+
+$box-width: 232px;
+
+.features {
+  position: relative;
+  margin-top: 110px;
+  padding-top: 40px;
+  &__wrapper {
+    max-width: 786px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-left: 4%;
+  }
+
+  &__list {
+    list-style-type: disc;
+    padding-left: 0;
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  &__name {
+    font-size: 34px;
+    font-family: "DIN Pro Cond", sans-serif;
+    color: #0c797a;
+    text-transform: uppercase;
+  }
+
+  &__image {
+    position: absolute;
+    top: 314px;
+    right: 0;
+    z-index: -1;
+  }
+
+  &__box {
+    max-width: 378px;
+    &:first-of-type {
+      align-self: flex-end;
+    }
+    &:nth-of-type(3) {
+      margin-top: 121px;
+      align-self: center;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .features {
+    width: 100%;
+    margin: 0;
+    margin-top: 50px;
+    padding: 5%;
+    background-color: #f2f2f2;
+    line-height: 1.4;
+    &__wrapper {
+      height: 472px;
+    }
+    &__item {
+      line-height: 1.4;
+      margin-bottom: 10px;
+    }
+    &__container {
+      position: relative;
+      overflow: hidden;
+    }
+    &__box {
+      right: 0%;
+      width: 100%;
+      transition: right 0.5s;
+      &:first-of-type,
+      &:nth-of-type(3) {
+        align-self: flex-start;
+      }
+      &:nth-of-type(3) {
+        margin-top: 0;
+      }
+    }
+    &__list {
+      padding-left: 14px;
+      text-align: left;
+    }
+    &__hide {
+      position: absolute;
+      right: -229%;
+    }
+    &__show {
+      right: 0%;
+    }
+    &__image {
+      position: static;
+      width: 100%;
+    }
+    &__buttons {
+      left: 0;
+      padding-top: 11px;
+    }
+  }
+}

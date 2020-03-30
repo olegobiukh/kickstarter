@@ -1,0 +1,63 @@
+@import "../utils/vars";
+@import "../utils/mixins";
+
+.summary {
+  width: 20%;
+  min-width: 230px;
+  margin-left: 10%;
+  border-left: 1px solid #e0e0e0;
+  padding-left: 5%;
+  &__title {
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+  &__box {
+    margin-top: 222px;
+    display: flex;
+    flex-direction: column;
+  }
+  &__suptitle {
+    font-size: 16px;
+    color: #4f4f4f;
+  }
+  &__price {
+    margin-top: 15px;
+    font-family: "DIN Pro Cond", sans-serif;
+    font-size: 34px;
+  }
+
+  &__button {
+    @include buttonBlack(16px, 55px);
+    margin-top: 51px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .summary {
+    margin-left: 0;
+    width: 44%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .summary {
+    border-left: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 90px;
+    &__box {
+      margin-top: 30px;
+    }
+    &__button {
+      padding: 16px 28px;
+    }
+
+    &__subtitle {
+      margin-top: 30px;
+    }
+
+  }
+}

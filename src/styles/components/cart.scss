@@ -1,0 +1,196 @@
+@import "../utils/vars";
+@import "../utils/mixins";
+
+$primary: #11998e;
+$secondary: #38ef7d;
+$white: #fff;
+$gray: #9b9b9b;
+
+.cart {
+  position: relative;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  padding-top: 25px;
+  &-white {
+    display: none;
+    flex-direction: column;
+    align-self: center;
+    width: 582px;
+    padding: 50px 102px;
+    background-color: $c-white;
+    margin-top: 128px;
+  }
+
+  &__arrow {
+    margin-top: 55px;
+    color: #bdbdbd;
+    font-size: 22px;
+    cursor: pointer;
+    width: fit-content;
+  }
+  &__form {
+    display: none;
+    flex-direction: column;
+    align-self: center;
+    min-width: 378px;
+    margin-top: 90px;
+  }
+
+  &__cards {
+    width: 230px;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+  }
+
+  &__group {
+    position: relative;
+    padding: 15px 0 0;
+    margin-top: 20px;
+    width: 100%;
+    &-bottom {
+      display: flex;
+    }
+    &-cvc {
+      width: 50px;
+      margin-left: 34px;
+    }
+    &-expires {
+      width: 34px;
+      &--wrapper {
+        width: 92px;
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  &__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 10px;
+    color: $gray;
+  }
+
+  &__field {
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid #0c797a;
+    outline: 0;
+    color: $c-black;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+
+    &::placeholder {
+      color: transparent;
+    }
+
+    &:placeholder-shown ~ .cart__label {
+      font-size: 14px;
+      cursor: text;
+      top: 20px;
+    }
+
+    &:required,
+    &:invalid {
+      box-shadow: none;
+    }
+  }
+
+  &__field:focus {
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    border-image: linear-gradient(to right, $primary, $secondary);
+    border-image-slice: 1;
+    ~ &__label {
+      position: absolute;
+      top: 0;
+      display: block;
+      transition: 0.2s;
+      font-size: 1rem;
+      color: $c-black;
+      font-weight: 700;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+  }
+
+  &__button {
+    @include buttonBlack(16px, 55px);
+  }
+
+  &__link {
+    text-transform: uppercase;
+    color: #4f4f4f;
+    font-size: 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  &__icon {
+    cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .cart {
+    width: 90%;
+    &-white {
+      max-width: 520px;
+      width: 100%;
+      padding: 50px 10%;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .cart {
+    padding-top: 80px;
+    
+    &-white {
+      background-color: transparent;
+      margin-top: 0;
+      padding: 80px 5% 50px;
+    }
+
+    &__form {
+      min-width: 90%;
+      margin: auto;
+    }
+
+    &__group {
+      margin-top: 8px;
+    }
+
+    &__cards {
+      width: 220px;
+    }
+
+    &__buttons-shipping {
+      flex-direction: column-reverse;
+    }
+
+    &__link-shipping {
+      margin-top: 40px;
+    }
+
+    &__arrow {
+      display: none;
+    }
+  }
+}

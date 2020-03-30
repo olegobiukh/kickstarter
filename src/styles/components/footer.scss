@@ -1,0 +1,52 @@
+@import "../utils/vars";
+@import "../utils/extends";
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+  margin-top: 142px;
+  &__media {
+    justify-content: space-between;
+    width: 150px;
+    display: flex;
+    margin-top: 65px;
+    font-size: 25px;
+    &--facebook:hover {
+      color: #4064ad;
+      transition: color 0.3s;
+    }
+    &--twitter:hover {
+      color: #53a7e7;
+      transition: color 0.3s;
+    }
+    &--instagram:hover {
+      color: #f7016c;
+      transition: color 0.3s;
+    }
+  }
+
+  &__logo {
+    @extend %logo;
+  }
+
+  &__copy {
+    color: #bdbdbd;
+    text-align: center;
+    margin-top: 36px;
+  }
+}
+
+@media only screen and (max-width: 786px) {
+  .footer {
+    margin-top: 90px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .footer__logo {
+    display: none;
+  }
+}

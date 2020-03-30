@@ -1,0 +1,68 @@
+@import "../utils/vars";
+
+$box-width: 232px;
+
+.progress {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  width: 300px;
+  margin-top: 32px;
+  &__line {
+    position: absolute;
+    width: 128px;
+    border: 1px solid transparent;
+    top: 5px;
+    left: 102%;
+    z-index: -1;
+  }
+  &__text {
+    position: absolute;
+    top: 50px;
+    left: 100%;
+    transform: translateX(-50%);
+    text-transform: uppercase;
+    color: #d0d0d0;
+    font-weight: bold;
+  }
+  &__item {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #d0d0d0;
+    margin: 1px;
+    &--wrapper {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      border: 2px solid transparent;
+      &-show .progress__text,
+      &-active .progress__text {
+        color: #333;
+      }
+      &-show .progress__item {
+        background-color: #4f4f4f;
+      }
+      &-show .progress__line {
+        border-color: #4f4f4f;
+        background-color: #4f4f4f;
+      }
+      &-active {
+        border-color: #4f4f4f;
+      }
+      &-active .progress__item {
+        background-color: #4f4f4f;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .progress {
+    display: none;
+  }
+}
