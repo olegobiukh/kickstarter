@@ -1,7 +1,7 @@
 {
-  "name": "dia",
+  "name": "kickstarter",
   "version": "1.0.0",
-  "description": "Dia landing page",
+  "description": "kickstarter",
   "main": "index.js",
   "scripts": {
     "start": "gulp",
