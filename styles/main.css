@@ -1948,6 +1948,7 @@ h2 {
     display: none; }
   .basket__list {
     width: 582px;
+    margin: auto;
     margin-top: 100px;
     padding: 0; }
   .basket__item {
